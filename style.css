@@ -47,6 +47,7 @@ footer {
     }
 
     /*GRID INDEX*/
+    /*
     header {
         background-color: white;
         height: 150px;
@@ -58,19 +59,21 @@ footer {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-    }
+    }*/
 
     .tamañoLogo {
         height: 120px;
         margin-left: 20px;
         position: relative;
     }
-
+    
     ul li {
         color: rgba(255, 255, 255, 0.27);
         background-color: rgb(255, 255, 255);
         position: relative;
+        /*
         display: inline-block;
+        */
         padding-left: 10px;
         padding-right: 10px;
         padding-top: 0px;
@@ -82,10 +85,12 @@ footer {
     ul {
         display: none;
     }
-
+    
+    /*
     ul li {
         display: block;
     }
+    */
 
     #menú {
         cursor: pointer;
@@ -136,7 +141,7 @@ footer {
 
     a {
         text-decoration: none;
-        color: rgba(0, 0, 0, 0.894);
+        color: rgb(0, 0, 0);
     
     }
 
@@ -212,12 +217,12 @@ footer {
         font-size: 5rem;
         font-family: 'Cookie', cursive;
     }
-
+    /*
     .flexRow {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
-    }
+    }*/
     
     i {
         font-size: 7rem;
@@ -254,8 +259,6 @@ footer {
 
 
 
-
-
 @media screen and (min-width:1200px) {
     #main {
         grid-template-columns: auto;
@@ -264,7 +267,8 @@ footer {
     }
     
     /*GRID INDEX*/
-
+    
+    /*
     header {
         background-color: white;
         height: 100%;
@@ -275,7 +279,7 @@ footer {
         flex-wrap: nowrap;
         justify-content: space-between;
         align-items: center;
-    }
+    }*/
 
     .tamañoLogo {
         height: 80px;
@@ -290,6 +294,13 @@ footer {
         display: inline-block;
     }
 
+    .list-inline-item {
+        list-style-type: none;
+        text-decoration: none;
+        font-size: 2.5rem;
+    }
+
+    /*
     ul li{
         background-color: rgb(255, 255, 255);
         position: relative;
@@ -300,10 +311,12 @@ footer {
         margin-right: 50px;
         list-style-type: none;
         font-size: 3rem;
-    }
+    }*/
 
     .transitionNav {
         border-bottom: double rgba(0, 0, 0, 0.468) 2px;
+        color: black;
+        text-decoration: none;
         transition: all 0.6s;
     }
 
@@ -349,9 +362,14 @@ footer {
         text-align: center;
     }
 
+    .subtitulos {
+        color: white;
+        font-size: 5rem;
+    }
+
     h2 {
         font-family: 'Courier New', Courier, monospace;
-        font-size: 4rem;
+        font-size: 5rem;
         text-align: center;
         color: rgb(255, 255, 255);
         margin-top: 30px;
@@ -440,11 +458,12 @@ footer {
         font-size: 4rem;
     }
 
+    /*
     .flexRow {
         display: flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
-    }
+    }*/
 
     i {
         font-size: 7rem;
@@ -594,302 +613,4 @@ header {
 
 footer {
     border: solid 1px blue;
-}*/
-
-
-
-/*CSS ANTERIOR*/
-
-/*
-header {
-    background-color: white;
-    height: 150px;
-    top: 0px;
-    position: relative;
-    width: 1360px;
-    z-index: 1;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    align-items: center;
-}
-
-.tamañoLogo {
-    height: 70px;
-    
-}
-
-
-ul li {
-    color: rgba(255, 255, 255, 0.27);
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    display: inline-block;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 0px;
-    margin-right: 50px;
-    list-style-type: none;
-    font-size: 2rem;
-    border: solid rgba(0, 0, 0, 0.178) 2px;
-    border-radius: 50px 15px 50px;
-}
-
-
-#imagenInicio {
-    height: 650px;
-    margin-left: 7.4%;
-    position: relative;
-    margin-top: 0px;
-}
-
-
-#TituloSpam {
-    margin-top: 20px;
-    line-height: 10rem;
-    font-family: 'Cookie', cursive;
-    font-size: 14rem;
-    color: rgb(255, 0, 0);
-    text-align: center;
-}
-
-#tituloPrincipal {
-    font-size: 4rem;
-    text-align: center;
-}
-
-
-h2 {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 4rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    margin-top: 50px;
-    margin-bottom: 30px;
-}
-
-
-#bienvenida {
-    font-size: 20rem;
-    position: relative;
-    bottom: 0px;
-}
-
-
-
-.fondoInicial {
-    background-color: white;
-    height: 1100px;
-}
-
-.parrafoBienvenida {
-    width: 300px;
-    margin-top: 30px;
-    margin-bottom: 50px;
-    color: rgba(0, 0, 0, 0.612);
-    text-align: center;
-    font-style: normal;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 1.8rem;
-    background-color: white;
-    height: 0px;
-    margin-left: 17%;
-}
-
-p {
-    font-size: 10rem;
-    color: rgb(245, 245, 243);
-    font-style: normal;
-    font-weight: bold;
-    text-align: center;
-}
-
-a {
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.894);
-
-}
-
-h2 {
-    text-align: center;
-    font-size: 8rem;
-}
-
-#fondo2 {
-    background-color: rgba(0, 0, 0, 0);
-}
-
-#articulo {
-    bottom: 24px;
-}
-
-
-
-.flexContainer {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-    align-items: baseline;
-    position: relative;
-    margin-bottom: 20px;
-}
-
-
-.boxModel {
-    border: solid rgb(155, 137, 137) 2px;
-    background-color: rgb(0,0,0,0.9);
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-
-
-.tamañoImagen {
-    width: 700px;
-}
-
-.titulosImagen {
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(255, 255, 255);
-    font-size: 7rem;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    text-align: center;
-    
-}
-
-.parrafoMain {
-    font-size: 5rem;
-    line-height: 5rem;
-    text-align: center;
-    color: white;
-}
-
-footer {
-    border-top: solid rgba(255, 255, 0, 0.872) 1px;
-    background: linear-gradient(rgb(0, 0, 0), black);
-    height: auto;
-    width: 100%;
-}
-
-
-#tituloFooter {
-    color: rgb(255, 255, 0);
-    text-align: center;
-}
-
-.flexRow {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-}
-
-
-
-i {
-    font-size: 5rem;
-    color: rgba(255, 255, 255, 0.482);
-}
-
-
-
-#copyright {
-    color: rgb(255, 255, 0);
-    text-align: center;
-    position: relative;
-}
-*/
-
-/* css carta */
-/*
-.fotosPaises {
-    position: relative;
-    left: 540px;
-    width: 270px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.botonPedir {
-    background-color: rgb(255,255,0);
-    margin-left: 28%;
-    border-bottom: solid grey 4px;
-    border-right: solid grey 4px;
-    border-top: double white 6px;
-    border-left: double white 6px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    font-size: 1.6rem;
-
-}*/
-
-/* delivery */
-/*
-#delivery {
-    background-color: rgba(0, 0, 0, 0.79);
-    position: relative;
-    margin: 100px 419px 100px 280px;
-    padding: auto;
-    border: solid white 1px;
-    padding: 20px 20px 20px 20px;
-    left: 65px;
-}*/
-/*
-#parrafoDelivery {
-    background-color: rgba(0, 0, 0, 0.359);
-}*/
-/*
-.imgDelivery {
-    height: 250px;
-}*/
-
-/* nosotros */
-/*
-.parrafoMenu {
-    position: relative;
-    left: 30%;
-    background-color: rgba(0, 0, 0, 0.7);
-    width: 500px;
-}
-*/
-/*
-#parrafoNosotros2 {
-    margin-bottom: 100px;
-}*/
-
-/* Contactos */
-/*
-form {
-    background-color:  rgb(255, 255, 255, 0.8);
-    height: 460px;
-    width: 250px;
-    font-size: 2rem;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-right: 800px;
-    position: relative;
-    left: 550px;
-    text-align: center;
-
-} 
-
-.inputTamaño {
-    padding: 5px 5px 5px 5px;
-    margin: 10px 10px 10px 10px;
-}
-
-button {
-    background-color: rgb(255,255,0);
-    margin-left: 28%;
-    border-bottom: solid grey 4px;
-    border-right: solid grey 4px;
-    border-top: double white 6px;
-    border-left: double white 6px;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 700;
-    font-size: 1.6rem;
 }*/
