@@ -1,700 +1,255 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0%;
+  padding: 0%;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
+}
 
+html a {
+  text-decoration: none;
+  color: black;
 }
 
 body {
-    background-image: url(img/fondo-main.jpg);
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    background-attachment: fixed;
+  background-image: url(img/fondo-main.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
-
 
 #main {
-    display: grid;
+  display: -ms-grid;
+  display: grid;
 }
 
 header {
-    grid-area: header;
+  grid-area: header;
 }
 
-.sect1 {
-    grid-area: sect1;
+.setc1 {
+  grid-area: sect1;
 }
 
 .sect2 {
-    grid-area: sect2;
+  grid-area: sect2;
 }
 
 footer {
-    grid-area: footer;
+  grid-area: footer;
 }
 
-@media screen and (max-width:575px) {
-    #main {
+@media screen and (min-width: 1200px) {
+  #main {
+    -ms-grid-columns: auto;
         grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
-        grid-template-areas: "header""sect1""sect2""footer";
-    }
-
-    /*GRID INDEX*/
-    header {
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .tamañoLogo {
-        height: 5.2rem;
-        margin-left: 5px;
-        position: relative;
-        transition: height 0.7s;
-    }
-
-    .tamañoLogo:hover {
-        height: 5.4rem;
-    }
-
-    ul li {
-        color: rgba(255, 255, 255, 0.27);
-        background-color: rgb(255, 255, 255);
-        position: relative;
-        display: inline-block;
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 0px;
-        margin-right: 50px;
-        list-style-type: none;
-        font-size: 2rem;
-    }
-
-    ul {
-        display: none;
-    }
-
-    ul li {
-        display: block;
-    }
-
-    #menú {
-        cursor: pointer;
-        position: relative;
-        font-size: 5.2rem;
-        color: rgb(0, 0, 0);
-        background: linear-gradient(rgba(220, 220, 220, 0), rgba(198, 198, 198, 0.292));
-    }
-
-    .sect1 {
-        height: auto;
-        width: 100%;
-    }
-
-    .fondoInicial {
-        background-color: white;
-        height: 100%;
-        width: 100%;
-    }
-
-    .imagenInicio {
-        width: 100%;
-    }
-
-    #TituloSpam {
-        font-size: 4rem;
-        margin-top: 20px;
-        font-family: 'Cookie', cursive;
-        color: rgb(255, 0, 0);
-        text-align: center;
-    }
-
-    #tituloPrincipal {
-        font-size: 3.5rem;
-        text-align: center;
-    }
-
-    .parrafoBienvenida {
-        margin-top: 20px;
-        margin-bottom: 40px;
-        color: rgba(0, 0, 0, 0.682);
-        text-align: center;
-        font-family: sans-serif;
-        font-size: 2.2rem;
-        width: 70%;
-        margin-left: 14.5%;
-    }
-
-    a {
-        text-decoration: none;
-        color: rgba(0, 0, 0, 0.894);
-
-    }
-
-    .sect2 {
-        width: 100%;
-        height: 100%;
-
-    }
-
-    h2 {
-        font-family: 'Cookie', cursive;
-        font-size: 5rem;
-        text-align: center;
-        color: rgb(222, 222, 222);
-        margin-top: 0px;
-    }
-
-    .flexColumnRow {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
-        margin-left: 10%;
-        width: 80% !important;
-        height: auto;
-        margin-top: 20px;
-        text-align: center;
-    }
-
-    .boxModel {
-        border: solid rgb(155, 137, 137) 2px;
-        background-color: rgb(0, 0, 0, 0.9);
-        padding-left: 10px;
-        padding-right: 10px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-bottom: 50px;
-    }
-
-
-    .tamañoImagen {
-        width: 100%;
-    }
-
-    .titulosImagen {
-        font-family: 'Courier New', Courier, monospace;
-        color: rgb(255, 255, 255);
-        font-size: 3rem;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        text-align: center;
-    }
-
-    .parrafoMain {
-        font-size: 2rem;
-        line-height: 3rem;
-        text-align: center;
-        color: white;
-    }
-
-    footer {
-        background: linear-gradient(rgba(0, 0, 0, 0.256), black);
-        height: 100%;
-        width: 100%;
-
-    }
-
-    .transitionFooter {
-        transition: 0.4s;
-    }
-
-    .transitionFooter:hover {
-        transform: scale(1.3, 1.3);
-    }
-
-    #tituloFooter {
-        color: rgb(255, 255, 0);
-        text-align: center;
-        font-size: 4rem;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    .flexRow {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-    }
-
-    i {
-        font-size: 4rem;
-        color: rgba(255, 255, 255, 0.482);
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-
-    #copyright {
-        color: rgb(255, 255, 0);
-        text-align: center;
-        font-size: 1.8rem;
-    }
-
-    /*GRID CARTA*/
-
-    .nombresPaises {
-        font-size: 4rem;
-        font-family: 'Courier New', Courier, monospace;
-        color: white;
-        font-weight: 530;
-        text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.283));
-    }
-
-    .botonPedir {
-        width: auto;
-        margin-left: 0%;
-        background-color: rgb(255, 255, 0);
-        border-end-start-radius: 1.5rem;
-        border-start-end-radius: 1.5rem;
-        border-color: rgb(255, 255, 0);
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 700;
-        font-size: 1.6rem;
-        transition: all 0.6s;
-    }
-
-    /*GRID DELIVERY*/
-
-    .imgDelivery {
-        width: 60%;
-        margin-left: 20%;
-        margin-bottom: 20px;
-    }
-
-    .botonPedir:hover {
-        border-color: white;
-        background-color: rgba(199, 192, 0, 0.92);
-    }
-
-    #delivery {
-        margin-bottom: 30px;
-    }
-
-    /*GRID NOSOTROS*/
-
-    .parrafoMenu {
-        font-size: 2.4rem;
-        background-color: rgba(0, 0, 0, 0.365);
-        color: white;
-        width: 80%;
-        margin-left: 10%;
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    #parrafoNosotros2 {
-        width: 80%;
-        margin-left: 10%;
-        margin-bottom: 30px;
-        background-color: rgba(0, 0, 0, 0.365);
-    }
-
-    /*GRID CONTACTOS*/
-
-    form {
-        background-color: rgb(255, 255, 255, 0.8);
-        height: auto;
-        width: 80%;
-        margin-left: 10%;
-        font-size: 2rem;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        text-align: center;
-
-    }
-
-    .inputTamaño {
-        padding: 5px 5px 5px 5px;
-        margin: 10px 10px 10px 10px;
-    }
-
-    button {
-        background-color: rgb(255, 255, 0);
-        margin-left: 28%;
-        border-bottom: solid grey 4px;
-        border-right: solid grey 4px;
-        border-top: double white 6px;
-        border-left: double white 6px;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 700;
-        font-size: 1.6rem;
-    }
-
-    textarea {
-        width: 90%;
-    }
-}
-
-
-
-@media screen and (min-width:1200px) {
-    #main {
-        grid-template-columns: auto;
+    -ms-grid-rows: 200px auto auto auto;
         grid-template-rows: 200px auto auto auto;
-        grid-template-areas: "header""sect1""sect2""footer";
-    }
-
-    /*GRID INDEX*/
-
-    header {
-        background-color: white;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
+        grid-template-areas: "header" "sect1" "sect2" "footer";
+  }
+  header {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .tamañoLogo {
-        margin-left: 20px;
-        height: 80px;
-        transition: height 0.7s;
-    }
-
-    .tamañoLogo:hover {
-        height: 85px;
-    }
-
-    ul {
-        display: inline-block;
-    }
-
-    ul li {
-        background-color: rgb(255, 255, 255);
-        position: relative;
-        display: inline-block;
-        padding-left: 0px;
-        padding-right: 0px;
-        padding-top: 0px;
-        margin-right: 50px;
-        list-style-type: none;
-        font-size: 3rem;
-    }
-
-    .transitionNav {
-        border-bottom: double rgba(0, 0, 0, 0.468) 2px;
-        transition: all 0.6s;
-    }
-
-    .transitionNav:hover {
-        color: white;
-        border-start-start-radius: 4rem;
-        border-start-end-radius: 4rem;
-        background-color: rgb(0, 0, 0);
-        padding: 10px;
-        border: solid white 2px;
-    }
-
-    .fondoInicial {
-        background-color: white;
-        height: 1100px;
-    }
-
-    #menú {
-        display: none;
-    }
-
-    .sect1 {
-        height: auto;
-        width: 100%;
-    }
-
-    .imagenInicio {
-        width: 80%;
-        margin-left: 10%;
-    }
-
-    #TituloSpam {
-        margin-top: 20px;
-        line-height: 7rem;
-        font-family: 'Cookie', cursive;
-        font-size: 8rem;
-        color: rgb(255, 0, 0);
-        text-align: center;
-    }
-
-    #tituloPrincipal {
-        font-size: 6rem;
-        text-align: center;
-    }
-
-    h2 {
-        font-family: 'Courier New', Courier, monospace;
-        font-size: 4rem;
-        text-align: center;
-        color: rgb(255, 255, 255);
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .parrafoBienvenida {
-        width: 70%;
-        margin-top: 30px;
-        margin-bottom: 50px;
-        margin-left: 15%;
-        color: rgba(0, 0, 0, 0.612);
-        text-align: center;
-        font-style: normal;
-        font-family: sans-serif;
-        font-weight: bold;
-        font-size: 2.7rem;
-        background-color: white;
-
-    }
-
-    a {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
-
-    }
-
-    .sect2 {
-        height: auto;
-    }
-
-    #fondo2 {
-        background-color: rgba(0, 0, 0, 0.386);
-    }
-
-    .flexColumnRow {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        width: 80%;
-        margin-left: 7.5%;
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-
-    .boxModel {
-        border: solid rgb(128, 120, 120) 2px;
-        background-color: rgba(0, 0, 0, 0.468);
-        padding: 10px;
-        margin-left: 5%;
-        height: auto;
-    }
-
-    .tamañoImagen {
-        height: 200px;
-    }
-
-    .titulosImagen {
-        font-family: 'Courier New', Courier, monospace;
-        color: rgb(255, 255, 255);
-        font-size: 2.5rem;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        text-align: center;
-
-    }
-
-    .parrafoMain {
-        font-size: 2rem;
-        line-height: 3rem;
-        text-align: center;
-        color: white;
-    }
-
-    footer {
-        background: linear-gradient(rgba(0, 0, 0, 0.557), black);
-        height: auto;
-        width: 100%;
-
-    }
-
-    #tituloFooter {
-        color: rgb(255, 255, 0);
-        text-align: center;
-        font-size: 4rem;
-        font-family: 'Courier New', Courier, monospace;
-    }
-
-    .flexRow {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: space-evenly;
-    }
-
-    i {
-        font-size: 7rem;
-        color: rgba(255, 255, 255, 0.482);
-        margin-top: 20px;
-        margin-bottom: 30px;
-    }
-
-    .transitionFooter {
-        transition: 0.4s;
-    }
-
-    .transitionFooter:hover {
-        transform: scale(1.5, 1.5);
-    }
-
-    #copyright {
-        color: rgb(255, 255, 0);
-        text-align: center;
-        font-size: 2.5rem;
-    }
-
-    /*CARTA*/
-
-    .nombresPaises {
-        font-size: 4rem;
-        font-family: 'Courier New', Courier, monospace;
-        color: white;
-        font-weight: 530;
-        text-align: center;
-        background: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.283));
-    }
-
-    .botonPedir {
-        display: flex;
-        justify-content: center;
-        align-content: end;
-        background-color: rgb(255, 255, 0);
-        border-radius: 2rem;
-        border-color: yellow;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 700;
-        font-size: 1.6rem;
-        transition: all 0.6s;
-    }
-
-    .botonPedir:hover {
-        border-color: white;
-        background-color: rgba(199, 192, 0, 0.92);
-        padding: 0px;
-    }
-
-    /*DELIVERY*/
-
-    #parrafoDelivery {
-        background-color: rgba(0, 0, 0, 0.187);
-        font-size: 2.5rem;
-        color: white;
-        width: 40%;
-        text-align: center;
-        margin-left: 30%;
-        margin-bottom: 50px;
-    }
-
-    #delivery {
-        display: flex;
-        justify-content: space-around;
-        border: solid rgb(255, 255, 255) 3px;
-        width: 50%;
-        margin-bottom: 50px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        margin-left: 25%;
-    }
-
-    .imgDelivery {
-        height: 100%;
-    }
-
-    #parrafoDelivery {
-        background-color: rgba(0, 0, 0, 0.187);
-        font-size: 2.5rem;
-        color: white;
-        width: 40%;
-        text-align: center;
-    }
-
-    /*GRID NOSOTROS*/
-
-    .parrafoMenu {
-        color: white;
-        background-color: rgba(0, 0, 0, 0.318);
-        width: 60%;
-        margin-left: 20%;
-        text-align: center;
-        font-size: 3rem;
-    }
-
-    #parrafoNosotros2 {
-        margin-bottom: 70px;
-    }
-
-    /*CONTACTOS*/
-
-    form {
-        background-color: rgb(255, 255, 255, 0.8);
-        height: auto;
-        width: 40%;
-        font-size: 2rem;
-        margin-top: 50px;
-        margin-bottom: 50px;
-        margin-right: 800px;
-        position: relative;
-        left: 30%;
-        text-align: center;
-
-    }
-
-    .emailImput {
-        margin-left: 4%;
-    }
-
-    .inputTamaño {
-        padding: 5px 0px 5px 0px;
-        margin: 10px 0px 10px 0px;
-        transition: 0.6s;
-    }
-
-    .inputTamaño:focus {
-        background-color: lightblue;
-        transform: scale(1.03, 1.03);
-    }
-
-    button {
-        background-color: rgb(255, 255, 0);
-        margin-left: 28%;
-        border-bottom: solid grey 4px;
-        border-right: solid grey 4px;
-        border-top: double white 6px;
-        border-left: double white 6px;
-        font-family: 'Courier New', Courier, monospace;
-        font-weight: 700;
-        font-size: 1.6rem;
-    }
-
-    textarea {
-        width: 60%;
-    }
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .tamañoLogo {
+    margin-left: 20px;
+    height: 80px;
+    -webkit-transition: height 0.7s;
+    transition: height 0.7s;
+  }
+  header .tamañoLogo:hover {
+    height: 85px;
+  }
+  header ul {
+    display: inline-block;
+  }
+  header ul li {
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    margin-right: 50px;
+    list-style-type: none;
+    font-size: 3rem;
+  }
+  header .transitionNav {
+    border-bottom: double rgba(0, 0, 0, 0.468) 2px;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  header .transitionNav:hover {
+    color: white;
+    border-start-start-radius: 4rem;
+    border-start-end-radius: 4rem;
+    background-color: black;
+    padding: 10px;
+    border: solid white 2px;
+  }
+  header #menú {
+    display: none;
+  }
+  .sect1 {
+    height: auto;
+    width: 100%;
+  }
+  .sect1 h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sect1 .fondoInicial {
+    background-color: white;
+    height: auto;
+  }
+  .sect1 .imagenInicio {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .sect1 #TituloSpam {
+    margin-top: 20px;
+    line-height: 7rem;
+    font-family: 'Cookie', cursive;
+    font-size: 8rem;
+    color: #fa0000;
+    text-align: center;
+  }
+  .sect1 #tituloPrincipal {
+    font-size: 6rem;
+    text-align: center;
+  }
+  .sect1 .parrafoBienvenida {
+    width: 70%;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: 15%;
+    color: #807d7d;
+    text-align: center;
+    font-style: normal;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 2.7rem;
+    background-color: white;
+  }
+  .sect2 {
+    height: auto;
+  }
+  .sect2 h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sect2 #fondo2 {
+    background-color: rgba(0, 0, 0, 0.386);
+  }
+  .sect2 .flexColumnRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 80%;
+    margin-left: 7.5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sect2 .flexColumnRow .boxModel {
+    border: solid #aea1a1 2px;
+    background-color: rgba(0, 0, 0, 0.468);
+    padding: 10px;
+    margin-left: 5%;
+    height: auto;
+  }
+  .sect2 .tamañoImagen {
+    height: 200px;
+  }
+  .sect2 .parrafoMain {
+    font: normal 2rem/3rem "open sans", sans-serif;
+    color: white;
+    text-align: center;
+  }
+  .sect2 .titulosImagen {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  footer {
+    background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
+    background: linear-gradient(black, black);
+    height: 100%;
+    width: 100%;
+  }
+  footer #tituloFooter {
+    color: yellow;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  footer .flexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer i {
+    font-size: 7rem;
+    color: rgba(255, 255, 255, 0.482);
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  footer .transitionFooter {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  footer .transitionFooter:hover {
+    -webkit-transform: scale(1.5, 1.5);
+            transform: scale(1.5, 1.5);
+  }
+  footer #copyright {
+    color: yellow;
+    text-align: center;
+    font-size: 2.5rem;
+  }
 }
-
-
-/*BORDES GRID*/
-
-/*
-header {
-    border: blue solid 1px;
-}
-
-.sect1 {
-    border: solid blue 1px;
-}
-
-.sect2 {
-    border: solid 1px blue;
-}
-
-footer {
-    border: solid 1px blue;
-}*/
+/*# sourceMappingURL=style.css.map */
