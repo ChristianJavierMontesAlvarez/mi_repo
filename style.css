@@ -1,4 +1,28 @@
 @charset "UTF-8";
+.boxModel {
+  border: solid #aea1a1 2px;
+  background-color: rgba(0, 0, 0, 0.468);
+  padding: 10px;
+  margin-left: 5%;
+  height: auto;
+}
+
+.facebook {
+  color: blue;
+}
+
+.gmail {
+  color: red;
+}
+
+.instagram {
+  color: orange;
+}
+
+.contactos {
+  color: #00aaff;
+}
+
 * {
   margin: 0%;
   padding: 0%;
@@ -185,22 +209,16 @@ footer {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .sect2 .flexColumnRow .boxModel {
-    border: solid #aea1a1 2px;
-    background-color: rgba(0, 0, 0, 0.468);
-    padding: 10px;
-    margin-left: 5%;
-    height: auto;
-  }
   .sect2 .tamañoImagen {
     height: 200px;
   }
   .sect2 .parrafoMain {
     font: normal 2rem/3rem "open sans", sans-serif;
+    font-weight: bold;
     color: white;
     text-align: center;
   }
-  .sect2 .titulosImagen {
+  .sect2 .titulosImagen, .sect2 .sect1 .flexColumnRow .boxModel, .sect1 .flexColumnRow .sect2 .boxModel {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-size: 2.5rem;
@@ -247,9 +265,63 @@ footer {
             transform: scale(1.5, 1.5);
   }
   footer #copyright {
+    font-weight: bold;
     color: yellow;
     text-align: center;
     font-size: 2.5rem;
+  }
+  /*carta*/
+  .sect1 .flexColumnRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 80%;
+    margin-left: 7.5%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .sect1 .flexColumnRow .boxModel .titulosImagen, .sect1 .flexColumnRow .boxModel .boxModel {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 2.5rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .sect1 .tamañoImagen {
+    width: 300px;
+  }
+  .sect1 .nombresPaises {
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 530;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.208)), color-stop(rgba(0, 0, 0, 0.53)), to(rgba(0, 0, 0, 0.283)));
+    background: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.283));
+  }
+  .sect1 .botonPedir {
+    margin-left: 30%;
+    background-color: yellow;
+    border-radius: 2rem;
+    border-color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  .sect1 .botonPedir:hover {
+    border-color: white;
+    background-color: rgba(199, 192, 0, 0.92);
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */

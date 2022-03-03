@@ -1,4 +1,16 @@
 @import "variables";
+@import "extend";
+@import "mixin";
+
+$redes:(facebook:blue, gmail:red, instagram:orange, contactos:rgb(0, 170, 255));
+
+@each $red,
+ $color in $redes {
+    .#{$red} {
+        color: $color;
+    }
+}
+
 
 * {
     margin: 0%;
@@ -10,7 +22,6 @@ html {
     a {
         text-decoration: none;
         color: rgb(0, 0, 0);
-
     }
 }
 
@@ -41,6 +52,8 @@ header {
 footer {
     grid-area: footer;
 }
+
+
 
 @media screen and (min-width:1200px) {
 
@@ -155,9 +168,13 @@ footer {
             font-size: 2.7rem;
             background-color: rgb(255, 255, 255);
         }
+
+        
     }
 
     .sect2 {
+        height: auto;
+        
         h2 {
             font-family: 'Courier New', Courier, monospace;
             font-size: 4rem;
@@ -166,7 +183,6 @@ footer {
             margin-top: 30px;
             margin-bottom: 30px;
         }
-        height: auto;
 
         #fondo2 {
             background-color: rgba(0, 0, 0, 0.386);
@@ -181,13 +197,6 @@ footer {
             margin-top: 30px;
             margin-bottom: 30px;
             
-            .boxModel {
-                border: solid rgb(174, 161, 161) 2px;
-                background-color: rgba(0, 0, 0, 0.468);
-                padding: 10px;
-                margin-left: 5%;
-                height: auto;
-            }
         }
 
         .tamañoImagen {
@@ -195,8 +204,8 @@ footer {
         }
 
         .parrafoMain {
-            
             font: $tipografiaPrincipal;
+            @include bold;
             color: white;
             text-align: center;
         }
@@ -208,7 +217,6 @@ footer {
             margin-top: 5px;
             margin-bottom: 5px;
             text-align: center;
-    
         }
     }
 
@@ -246,9 +254,67 @@ footer {
         }
 
         #copyright {
+            @include bold;
             color: rgb(255, 255, 0);
             text-align: center;
             font-size: 2.5rem;
+        }
+    }
+
+    /*carta*/
+
+    .sect1 {
+
+        .flexColumnRow {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            width: 80%;
+            margin-left: 7.5%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            .boxModel {
+                    @extend .titulosImagen;
+                    .titulosImagen {
+                        font-family: 'Courier New', Courier, monospace;
+                        color: rgb(255, 255, 255);
+                        font-size: 2.5rem;
+                        margin-top: 5px;
+                        margin-bottom: 5px;
+                        text-align: center;
+                    }
+            }
+            
+        }
+
+        .tamañoImagen {
+            width: 300px;
+        }
+
+        .nombresPaises {
+            font-size: 4rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            font-weight: 530;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.283));
+        }
+
+        .botonPedir {
+            margin-left: 30%;
+            background-color: rgb(255, 255, 0);
+            border-radius: 2rem;
+            border-color: yellow;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            font-size: 1.6rem;
+            transition: all 0.6s;
+        }
+
+        .botonPedir:hover {
+            border-color: white;
+            background-color: rgba(199, 192, 0, 0.92);
+            padding: 0px;
         }
     }
 }
