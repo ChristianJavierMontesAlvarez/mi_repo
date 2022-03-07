@@ -7,22 +7,6 @@
   height: auto;
 }
 
-.facebook {
-  color: blue;
-}
-
-.gmail {
-  color: red;
-}
-
-.instagram {
-  color: orange;
-}
-
-.contactos {
-  color: #00aaff;
-}
-
 * {
   margin: 0%;
   padding: 0%;
@@ -218,7 +202,7 @@ footer {
     color: white;
     text-align: center;
   }
-  .sect2 .titulosImagen, .sect2 .sect1 .flexColumnRow .boxModel, .sect1 .flexColumnRow .sect2 .boxModel {
+  .sect2 .titulosImagen {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-size: 2.5rem;
@@ -227,8 +211,8 @@ footer {
     text-align: center;
   }
   footer {
-    background: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-    background: linear-gradient(black, black);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.764)), to(black));
+    background: linear-gradient(rgba(0, 0, 0, 0.764), black);
     height: 100%;
     width: 100%;
   }
@@ -270,7 +254,9 @@ footer {
     text-align: center;
     font-size: 2.5rem;
   }
-  /*carta*/
+  .sect1 {
+    /*carta*/
+  }
   .sect1 .flexColumnRow {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -287,7 +273,7 @@ footer {
     margin-top: 30px;
     margin-bottom: 30px;
   }
-  .sect1 .flexColumnRow .boxModel .titulosImagen, .sect1 .flexColumnRow .boxModel .boxModel {
+  .sect1 .flexColumnRow .boxModel .titulosImagen {
     font-family: 'Courier New', Courier, monospace;
     color: white;
     font-size: 2.5rem;
@@ -322,6 +308,424 @@ footer {
     border-color: white;
     background-color: rgba(199, 192, 0, 0.92);
     padding: 0px;
+  }
+  /*DELIVERY*/
+  .sect1 #parrafoDelivery {
+    background-color: rgba(0, 0, 0, 0.187);
+    font-size: 2.5rem;
+    color: white;
+    width: 40%;
+    text-align: center;
+    margin-left: 30%;
+    margin-bottom: 50px;
+  }
+  .sect1 #delivery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    border: solid white 3px;
+    width: 50%;
+    margin-bottom: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 25%;
+  }
+  .sect1 .imgDelivery {
+    height: 100%;
+  }
+  .sect1 #parrafoDelivery {
+    background-color: rgba(0, 0, 0, 0.187);
+    font-size: 2.5rem;
+    color: white;
+    width: 40%;
+    text-align: center;
+  }
+  .sect1 {
+    /*GRID NOSOTROS*/
+  }
+  .sect1 .parrafoMenu {
+    font-size: 2.4rem;
+    background-color: rgba(0, 0, 0, 0.511);
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .sect1 #parrafoNosotros2 {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.365);
+  }
+  /*CONTACTOS*/
+  .sect1 form {
+    background-color: rgba(219, 215, 215, 0.435);
+    height: auto;
+    width: 40%;
+    margin-left: 30%;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .sect1 form .inputTamaño {
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+  }
+  .sect1 form textarea {
+    width: 90%;
+  }
+  .sect1 form button {
+    background-color: yellow;
+    margin-left: 28%;
+    border-bottom: solid grey 4px;
+    border-right: solid grey 4px;
+    border-top: double white 6px;
+    border-left: double white 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #main {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: 100px auto auto auto;
+        grid-template-rows: 100px auto auto auto;
+        grid-template-areas: "header" "sect1" "sect2" "footer";
+  }
+  /*INDEX*/
+  /*GRID INDEX*/
+  header {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .tamañoLogo {
+    height: 5.2rem;
+    margin-left: 5px;
+    position: relative;
+    -webkit-transition: height 0.7s;
+    transition: height 0.7s;
+  }
+  header .tamañoLogo:hover {
+    height: 5.4rem;
+  }
+  header .tamañoLogo:hover {
+    height: 5.4rem;
+  }
+  header ul li {
+    color: rgba(255, 255, 255, 0.27);
+    background-color: white;
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 0px;
+    margin-right: 50px;
+    list-style-type: none;
+    font-size: 2rem;
+  }
+  header ul {
+    display: none;
+  }
+  header ul ul li {
+    display: block;
+  }
+  header #menú {
+    cursor: pointer;
+    position: relative;
+    font-size: 5.2rem;
+    color: black;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(220, 220, 220, 0)), to(rgba(198, 198, 198, 0.292)));
+    background: linear-gradient(rgba(220, 220, 220, 0), rgba(198, 198, 198, 0.292));
+  }
+  .sect1 .fondoInicial {
+    background-color: white;
+    height: AUTO;
+    width: 100%;
+  }
+  .sect1 .imagenInicio {
+    width: 100%;
+  }
+  .sect1 #TituloSpam {
+    font-size: 4rem;
+    margin-top: 5px;
+    font-family: 'Cookie', cursive;
+    color: red;
+    text-align: center;
+  }
+  .sect1 #tituloPrincipal {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+  .sect1 .parrafoBienvenida {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 0.682);
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.2rem;
+    width: 70%;
+    margin-left: 14.5%;
+  }
+  .sect1 h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 4rem;
+    text-align: center;
+    color: #dedede;
+    margin-top: 0px;
+  }
+  .sect2 {
+    width: 100%;
+    height: 100%;
+  }
+  .sect2 h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #dedede;
+    margin-top: 0px;
+  }
+  .sect2 .flexColumnRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 8.5%;
+    width: 80% !important;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .sect2 .flexColumnRow .boxModel {
+    border: solid #9b8989 2px;
+    background-color: rgba(0, 0, 0, 0.908);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+  }
+  .sect2 .flexColumnRow .boxModel .tamañoImagen {
+    width: 80%;
+  }
+  .sect2 .flexColumnRow .boxModel .titulosImagen {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 3rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .sect2 .flexColumnRow .boxModel .parrafoMain {
+    font-size: 2rem;
+    line-height: 3rem;
+    text-align: center;
+    color: white;
+  }
+  footer {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.256)), to(black));
+    background: linear-gradient(rgba(0, 0, 0, 0.256), black);
+    height: 100%;
+    width: 100%;
+  }
+  footer #tituloFooter {
+    color: #ffff07;
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  footer .flexRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  footer .flexRow i {
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 0.456);
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  footer .flexRow .transitionFooter {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  footer .flexRow .transitionFooter:hover {
+    -webkit-transform: scale(1.3, 1.3);
+            transform: scale(1.3, 1.3);
+  }
+  footer #copyright {
+    color: yellow;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+  .sect1 {
+    /*CARTA*/
+    /*DELIVERY*/
+    /*NOSOTROS*/
+    /*CONTACTOS*/
+  }
+  .sect1 h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3.5rem;
+    text-align: center;
+    color: #dedede;
+    margin-top: 10px;
+  }
+  .sect1 .flexColumnRow {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    margin-left: 8.5%;
+    width: 80% !important;
+    height: auto;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .sect1 .flexColumnRow .boxModel {
+    border: solid #9b8989 2px;
+    background-color: rgba(0, 0, 0, 0.908);
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+  }
+  .sect1 .flexColumnRow .boxModel .tamañoImagen {
+    width: 90%;
+  }
+  .sect1 .flexColumnRow .boxModel .titulosImagen {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 3rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .sect1 .nombresPaises {
+    font-size: 4rem;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-weight: 530;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.208)), color-stop(rgba(0, 0, 0, 0.53)), to(rgba(0, 0, 0, 0.283)));
+    background: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.283));
+  }
+  .sect1 .botonPedir {
+    width: auto;
+    margin-left: 0%;
+    background-color: yellow;
+    border-end-start-radius: 1.5rem;
+    border-start-end-radius: 1.5rem;
+    border-color: yellow;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+    -webkit-transition: all 0.6s;
+    transition: all 0.6s;
+  }
+  .sect1 .imgDelivery {
+    width: 60%;
+    margin-left: 20%;
+    margin-bottom: 20px;
+  }
+  .sect1 .botonPedir:hover {
+    border-color: white;
+    background-color: rgba(199, 192, 0, 0.92);
+  }
+  .sect1 #delivery {
+    margin-bottom: 30px;
+  }
+  .sect1 .parrafoMenu {
+    font-size: 2.4rem;
+    background-color: rgba(0, 0, 0, 0.365);
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .sect1 #parrafoNosotros2 {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 30px;
+    background-color: rgba(0, 0, 0, 0.365);
+  }
+  .sect1 form {
+    background-color: rgba(244, 244, 244, 0.8);
+    height: auto;
+    width: 80%;
+    margin-left: 10%;
+    font-size: 2rem;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  .sect1 .inputTamaño {
+    width: 90%;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+  }
+  .sect1 button {
+    background-color: yellow;
+    margin-left: 28%;
+    border-bottom: solid grey 4px;
+    border-right: solid grey 4px;
+    border-top: double white 6px;
+    border-left: double white 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 700;
+    font-size: 1.6rem;
+  }
+  .sect1 textarea {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=style.css.map */

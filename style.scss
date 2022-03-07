@@ -2,15 +2,6 @@
 @import "extend";
 @import "mixin";
 
-$redes:(facebook:blue, gmail:red, instagram:orange, contactos:rgb(0, 170, 255));
-
-@each $red,
- $color in $redes {
-    .#{$red} {
-        color: $color;
-    }
-}
-
 
 * {
     margin: 0%;
@@ -168,8 +159,6 @@ footer {
             font-size: 2.7rem;
             background-color: rgb(255, 255, 255);
         }
-
-        
     }
 
     .sect2 {
@@ -221,7 +210,7 @@ footer {
     }
 
     footer {
-        background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0));
+        background: linear-gradient(rgba(0, 0, 0, 0.764), rgb(0, 0, 0));
         height: 100%;
         width: 100%;
 
@@ -261,9 +250,9 @@ footer {
         }
     }
 
-    /*carta*/
-
     .sect1 {
+
+        /*carta*/
 
         .flexColumnRow {
             display: flex;
@@ -274,17 +263,15 @@ footer {
             margin-top: 30px;
             margin-bottom: 30px;
             .boxModel {
-                    @extend .titulosImagen;
-                    .titulosImagen {
-                        font-family: 'Courier New', Courier, monospace;
-                        color: rgb(255, 255, 255);
-                        font-size: 2.5rem;
-                        margin-top: 5px;
-                        margin-bottom: 5px;
-                        text-align: center;
-                    }
+                .titulosImagen {
+                    font-family: 'Courier New', Courier, monospace;
+                    color: rgb(255, 255, 255);
+                    font-size: 2.5rem;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
             }
-            
         }
 
         .tamañoImagen {
@@ -315,6 +302,440 @@ footer {
             border-color: white;
             background-color: rgba(199, 192, 0, 0.92);
             padding: 0px;
+        }
+    }
+
+    /*DELIVERY*/ 
+
+    .sect1 {
+        #parrafoDelivery {
+            background-color: rgba(0, 0, 0, 0.187);
+            font-size: 2.5rem;
+            color: white;
+            width: 40%;
+            text-align: center;
+            margin-left: 30%;
+            margin-bottom: 50px;
+        }
+    
+        #delivery {
+            display: flex;
+            justify-content: space-around;
+            border: solid rgb(255, 255, 255) 3px;
+            width: 50%;
+            margin-bottom: 50px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-left: 25%;
+        }
+    
+        .imgDelivery {
+            height: 100%;
+        }
+    
+        #parrafoDelivery {
+            background-color: rgba(0, 0, 0, 0.187);
+            font-size: 2.5rem;
+            color: white;
+            width: 40%;
+            text-align: center;
+        }
+    }
+
+    .sect1 {
+
+        /*GRID NOSOTROS*/
+
+        .parrafoMenu {
+            font-size: 2.4rem;
+            background-color: rgba(0, 0, 0, 0.511);
+            color: white;
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #parrafoNosotros2 {
+            width: 80%;
+            margin-left: 10%;
+            margin-bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.365);
+        }
+    }
+
+    /*CONTACTOS*/
+    
+    .sect1 {
+        form {
+            background-color: rgba(219, 215, 215, 0.435);
+            height: auto;
+            width: 40%;
+            margin-left: 30%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+
+            .inputTamaño {
+                padding: 5px 5px 5px 5px;
+                margin: 10px 10px 10px 10px;
+            }
+
+            textarea {
+                width: 90%;
+            }   
+
+            button {
+                background-color: rgb(255, 255, 0);
+                margin-left: 28%;
+                border-bottom: solid grey 4px;
+                border-right: solid grey 4px;
+                border-top: double white 6px;
+                border-left: double white 6px;
+                font-family: 'Courier New', Courier, monospace;
+                font-weight: 700;
+                font-size: 1.6rem;
+            } 
+        }
+    }
+}
+
+
+@media screen and (max-width:575px) {
+    #main {
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto auto auto;
+        grid-template-areas: "header" "sect1" "sect2" "footer";
+    }
+
+    /*INDEX*/ 
+
+    /*GRID INDEX*/
+    header {
+        background-color: white;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .tamañoLogo {
+            height: 5.2rem;
+            margin-left: 5px;
+            position: relative;
+            transition: height 0.7s;
+            &:hover {
+                height: 5.4rem;
+            }
+        }
+
+        .tamañoLogo:hover {
+            height: 5.4rem;
+        }
+
+        ul li {
+            color: rgba(255, 255, 255, 0.27);
+            background-color: rgb(255, 255, 255);
+            position: relative;
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 0px;
+            margin-right: 50px;
+            list-style-type: none;
+            font-size: 2rem;
+        }
+
+        ul {
+            display: none;
+            ul li {
+                display: block;
+            }
+        }
+
+        #menú {
+            cursor: pointer;
+            position: relative;
+            font-size: 5.2rem;
+            color: rgb(0, 0, 0);
+            background: linear-gradient(rgba(220, 220, 220, 0), rgba(198, 198, 198, 0.292));
+        }
+    }
+
+    .sect1 {
+        .fondoInicial {
+            background-color: white;
+            height: AUTO;
+            width: 100%;
+        }
+
+        .imagenInicio {
+            width: 100%;
+        }
+
+        #TituloSpam {
+            font-size: 4rem;
+            margin-top: 5px;
+            font-family: 'Cookie', cursive;
+            color: rgb(255, 0, 0);
+            text-align: center;
+        }
+
+        #tituloPrincipal {
+            font-size: 3.5rem;
+            text-align: center;
+        }
+
+        .parrafoBienvenida {
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-bottom: 20px;
+            color: rgba(0, 0, 0, 0.682);
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 2.2rem;
+            width: 70%;
+            margin-left: 14.5%;
+        }
+
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 4rem;
+            text-align: center;
+            color: rgb(222, 222, 222);
+            margin-top: 0px;
+        }
+    }
+
+    .sect2 {
+        width: 100%;
+        height: 100%;
+
+        h2 {
+            
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3.5rem;
+            text-align: center;
+            color: rgb(222, 222, 222);
+            margin-top: 0px;
+        }
+
+        .flexColumnRow {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            margin-left: 8.5%;
+            width: 80% !important;
+            height: auto;
+            margin-top: 20px;
+            text-align: center;
+            .boxModel {
+                border: solid rgb(155, 137, 137) 2px;
+                background-color: rgba(0, 0, 0, 0.908);
+                padding-left: 10px;
+                padding-right: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 50px;
+                .tamañoImagen {
+                    width: 80%;
+                }
+                .titulosImagen {
+                    font-family: 'Courier New', Courier, monospace;
+                    color: rgb(255, 255, 255);
+                    font-size: 3rem;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+                .parrafoMain {
+                    font-size: 2rem;
+                    line-height: 3rem;
+                    text-align: center;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    footer {
+        background: linear-gradient(rgba(0, 0, 0, 0.256), black);
+        height: 100%;
+        width: 100%;
+
+        #tituloFooter {
+            color: rgb(255, 255, 7);
+            text-align: center;
+            font-size: 4rem;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .flexRow {
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+
+            i {
+                font-size: 4rem;
+                color: rgba(255, 255, 255, 0.456);
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+
+            .transitionFooter {
+                transition: 0.4s;
+                &:hover {
+                    transform: scale(1.3, 1.3);
+                }
+            }
+        }
+        #copyright {
+            color: rgb(255, 255, 0);
+            text-align: center;
+            font-size: 1.8rem;
+        }
+    }
+
+    .sect1 {
+
+        h2 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3.5rem;
+            text-align: center;
+            color: rgb(222, 222, 222);
+            margin-top: 10px;
+        }
+
+        /*CARTA*/
+    
+        .flexColumnRow {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: space-evenly;
+            margin-left: 8.5%;
+            width: 80% !important;
+            height: auto;
+            margin-top: 20px;
+            text-align: center;
+            .boxModel {
+                border: solid rgb(155, 137, 137) 2px;
+                background-color: rgba(0, 0, 0, 0.908);
+                padding-left: 5px;
+                padding-right: 5px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                margin-bottom: 50px;
+                .tamañoImagen {
+                    width: 90%;
+                }
+                .titulosImagen {
+                    font-family: 'Courier New', Courier, monospace;
+                    color: rgb(255, 255, 255);
+                    font-size: 3rem;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .nombresPaises {
+            font-size: 4rem;
+            font-family: 'Courier New', Courier, monospace;
+            color: white;
+            font-weight: 530;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.208), rgba(0, 0, 0, 0.53), rgba(0, 0, 0, 0.283));
+        }
+    
+        .botonPedir {
+            width: auto;
+            margin-left: 0%;
+            background-color: rgb(255, 255, 0);
+            border-end-start-radius: 1.5rem;
+            border-start-end-radius: 1.5rem;
+            border-color: rgb(255, 255, 0);
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            font-size: 1.6rem;
+            transition: all 0.6s;
+        }
+
+        /*DELIVERY*/
+
+        .imgDelivery {
+            width: 60%;
+            margin-left: 20%;
+            margin-bottom: 20px;
+        }
+    
+        .botonPedir:hover {
+            border-color: white;
+            background-color: rgba(199, 192, 0, 0.92);
+        }
+    
+        #delivery {
+            margin-bottom: 30px;
+        }
+
+        /*NOSOTROS*/
+
+        .parrafoMenu {
+            font-size: 2.4rem;
+            background-color: rgba(0, 0, 0, 0.365);
+            color: white;
+            width: 80%;
+            margin-left: 10%;
+            text-align: center;
+            margin-top: 20px;
+        }
+    
+        #parrafoNosotros2 {
+            width: 80%;
+            margin-left: 10%;
+            margin-bottom: 30px;
+            background-color: rgba(0, 0, 0, 0.365);
+        }
+
+        /*CONTACTOS*/
+
+        form {
+            background-color: rgba(244, 244, 244, 0.8);
+            height: auto;
+            width: 80%;
+            margin-left: 10%;
+            font-size: 2rem;
+            margin-top: 50px;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+    
+        .inputTamaño {
+            width: 90%;
+            padding: 5px 5px 5px 5px;
+            margin: 10px 10px 10px 10px;
+        }
+    
+        button {
+            background-color: rgb(255, 255, 0);
+            margin-left: 28%;
+            border-bottom: solid grey 4px;
+            border-right: solid grey 4px;
+            border-top: double white 6px;
+            border-left: double white 6px;
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+    
+        textarea {
+            width: 90%;
         }
     }
 }
