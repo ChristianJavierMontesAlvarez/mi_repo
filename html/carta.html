@@ -15,7 +15,6 @@
         <header>
             <a href="../index.html"><img class="tamañoLogo" src="../img/logo.png"></a>
             <nav>
-                <a><i id="menú" class='bx bx-menu'></i></a>
                 <ul>
                     <li><a class="transitionNav" href="../index.html">Home</a></li>
                     <li><a class="transitionNav" href="carta.html">Carta</a></li>
@@ -24,6 +23,36 @@
                     <li><a class="transitionNav" href="contactos.html">Contactos</a></li>
                 </ul>
             </nav>
+            <a class="btn" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                <span class="btn_mobile">
+                    <i id="menú" class='bx bx-menu'></i>
+                </span>
+            </a>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+                <div class="d-flex justify-content-between">
+                    <span class="MenúDesplegable">Menú</span>
+                    <button id="BotonCerrarNav" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                  <div class="offcanvas-body">
+                    <ul class="navbarNav">
+                        <li>
+                            <a class="transitionNav" href="../index.html">Home</a>
+                        </li>
+                        <li>
+                            <a class="transitionNav" href="carta.html">Carta</a>
+                        </li>
+                        <li>
+                            <a class="transitionNav" href="delivery.html">Delivery</a>
+                        </li>
+                        <li>
+                            <a class="transitionNav" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li>
+                            <a class="transitionNav" href="contactos.html">Contactos</a>
+                        </li>
+                    </ul>
+                  </div>
+            </div>
         </header>
         <main class="sect1">
             <h2>Carta</h2>
@@ -72,10 +101,8 @@
                     </article>
                     <article class="boxModel">
                         <img src="../img/aji-de-gallina.jpg" class="tamañoImagen">
-                        <div>
                             <h4 class="titulosImagen">Ají de Gallina</h4>
                             <button class="botonPedir"><a href="delivery.html">Hacer Pedido</a></button>
-                        </div>
                     </article>
                 </div>
             </section>
